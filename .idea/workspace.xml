@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="WorldOfTanks:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b31bb68-b7a2-4ee4-aec4-0af4376cbde7" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VeRQj0My3clhci6KCMp3sNyEMx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WIN\WorldOfTanks\src\com\ngdat\worldoftanks\resources\images\items" />
+      <recent name="D:\WIN\WorldOfTanks\src\com\ngdat\worldoftanks\resources\images" />
+      <recent name="D:\WIN\WorldOfTanks\src\com\ngdat\worldoftanks\resources\images\weapons" />
+      <recent name="D:\WIN\WorldOfTanks\src\com\ngdat\worldoftanks\resources\images\tanks" />
+      <recent name="D:\WIN\WorldOfTanks\src\com\ngdat\worldoftanks\resources\images\buttons" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ngdat.worldoftanks.models.listenermanagers" />
+      <recent name="com.ngdat.worldoftanks.managers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WIN\WorldOfTanks\src\com\ngdat\worldoftanks\resources\audios" />
+      <recent name="D:\WIN\WorldOfTanks\src\com\ngdat\worldoftanks\resources\maps" />
+      <recent name="D:\WIN\WorldOfTanks\src\com\ngdat\worldoftanks\resources\images" />
+      <recent name="D:\JAV\WorldOfTanks\src\com\ngdat\worldoftanks\resources\images" />
+      <recent name="D:\WorldOfTanks\src\com\ngdat\worldoftanks\resources\images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.uit.tanks.main.Main" />
+      <module name="UITGame2DTanks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uit.tanks.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="grailsApplicationRoot" value="" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b31bb68-b7a2-4ee4-aec4-0af4376cbde7" name="Default" comment="" />
+      <created>1482381019504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1482381019504</updated>
+      <workItem from="1482381022610" duration="2248000" />
+      <workItem from="1482387167927" duration="12523000" />
+      <workItem from="1482404208317" duration="4016000" />
+      <workItem from="1482412355504" duration="7137000" />
+      <workItem from="1482426645054" duration="3039000" />
+      <workItem from="1482474501951" duration="1256000" />
+      <workItem from="1482481553040" duration="905000" />
+      <workItem from="1482489455717" duration="3209000" />
+      <workItem from="1482501370487" duration="3329000" />
+      <workItem from="1482509182215" duration="5045000" />
+      <workItem from="1482514887612" duration="4070000" />
+      <workItem from="1482545427054" duration="9543000" />
+      <workItem from="1482559468914" duration="12811000" />
+      <workItem from="1482576588950" duration="4965000" />
+      <workItem from="1482586677699" duration="639000" />
+      <workItem from="1482590107539" duration="2145000" />
+      <workItem from="1482599825404" duration="3320000" />
+      <workItem from="1482603845754" duration="308000" />
+      <workItem from="1482637396837" duration="944000" />
+      <workItem from="1482645325012" duration="3178000" />
+      <workItem from="1482652867823" duration="1587000" />
+      <workItem from="1482659101420" duration="2621000" />
+      <workItem from="1482687493510" duration="2013000" />
+      <workItem from="1482741713427" duration="3148000" />
+      <workItem from="1482757726687" duration="2219000" />
+      <workItem from="1482770465740" duration="3195000" />
+      <workItem from="1482810760008" duration="2766000" />
+      <workItem from="1482814356639" duration="308000" />
+      <workItem from="1482827829854" duration="11054000" />
+      <workItem from="1482846333681" duration="4410000" />
+      <workItem from="1482851307778" duration="294000" />
+      <workItem from="1482856476601" duration="3853000" />
+      <workItem from="1482894913212" duration="71000" />
+      <workItem from="1482895104803" duration="132000" />
+      <workItem from="1482896023559" duration="4824000" />
+      <workItem from="1482905369322" duration="7062000" />
+      <workItem from="1482919616155" duration="5731000" />
+      <workItem from="1482930803335" duration="4751000" />
+      <workItem from="1482947481238" duration="3656000" />
+      <workItem from="1482984802203" duration="1706000" />
+      <workItem from="1482990671314" duration="1046000" />
+      <workItem from="1483005727991" duration="1251000" />
+      <workItem from="1483036270218" duration="818000" />
+      <workItem from="1483091712206" duration="6510000" />
+      <workItem from="1483105771155" duration="1290000" />
+      <workItem from="1483119203046" duration="34000" />
+      <workItem from="1483155656089" duration="3901000" />
+      <workItem from="1483163833686" duration="217000" />
+      <workItem from="1483169761946" duration="4166000" />
+      <workItem from="1483178059892" duration="7814000" />
+      <workItem from="1483191861539" duration="7391000" />
+      <workItem from="1483204670561" duration="2970000" />
+      <workItem from="1483244442072" duration="2798000" />
+      <workItem from="1483249941559" duration="9828000" />
+      <workItem from="1483261126584" duration="831000" />
+      <workItem from="1483637081957" duration="1374000" />
+      <workItem from="1483638948037" duration="1043000" />
+      <workItem from="1483670832026" duration="7715000" />
+      <workItem from="1483681122610" duration="1761000" />
+      <workItem from="1483687219285" duration="6152000" />
+      <workItem from="1483774789232" duration="15033000" />
+      <workItem from="1483795752098" duration="1893000" />
+      <workItem from="1483805574040" duration="5697000" />
+      <workItem from="1483848232117" duration="6755000" />
+      <workItem from="1483856916201" duration="4907000" />
+      <workItem from="1483861991607" duration="9567000" />
+      <workItem from="1483896279371" duration="5843000" />
+      <workItem from="1483928177152" duration="14306000" />
+      <workItem from="1483953001135" duration="8647000" />
+      <workItem from="1483964566127" duration="858000" />
+      <workItem from="1483969960151" duration="1859000" />
+      <workItem from="1483979425027" duration="3374000" />
+      <workItem from="1483983387453" duration="232000" />
+      <workItem from="1484016920391" duration="6653000" />
+      <workItem from="1484028030889" duration="19412000" />
+      <workItem from="1484055474587" duration="4514000" />
+      <workItem from="1484067136314" duration="6164000" />
+      <workItem from="1484104035034" duration="5772000" />
+      <workItem from="1484115996278" duration="2374000" />
+      <workItem from="1484120155567" duration="7396000" />
+      <workItem from="1484128400051" duration="4048000" />
+      <workItem from="1484143196608" duration="2445000" />
+      <workItem from="1484153577384" duration="1516000" />
+      <workItem from="1484202113400" duration="10801000" />
+      <workItem from="1484216068678" duration="1568000" />
+      <workItem from="1484240970988" duration="5787000" />
+      <workItem from="1484281227700" duration="1760000" />
+      <workItem from="1484287840962" duration="1661000" />
+      <workItem from="1484292981731" duration="12418000" />
+      <workItem from="1484314802373" duration="7104000" />
+      <workItem from="1484365861654" duration="5202000" />
+      <workItem from="1484378732830" duration="11565000" />
+      <workItem from="1484456395491" duration="2975000" />
+      <workItem from="1484464801108" duration="10093000" />
+      <workItem from="1484541161996" duration="2677000" />
+      <workItem from="1484547775044" duration="19364000" />
+      <workItem from="1484574303770" duration="2779000" />
+      <workItem from="1484579974737" duration="88000" />
+      <workItem from="1484588130486" duration="1442000" />
+      <workItem from="1484661574151" duration="4609000" />
+      <workItem from="1484669971234" duration="8277000" />
+      <workItem from="1484710732945" duration="32000" />
+      <workItem from="1484710863802" duration="19037000" />
+      <workItem from="1484763212655" duration="1442000" />
+      <workItem from="1484881693072" duration="7242000" />
+      <workItem from="1484892528319" duration="13054000" />
+      <workItem from="1484907212439" duration="6047000" />
+      <workItem from="1484913722354" duration="127000" />
+      <workItem from="1484918438224" duration="1680000" />
+      <workItem from="1484920158161" duration="5597000" />
+      <workItem from="1484931694664" duration="8209000" />
+      <workItem from="1484972982310" duration="538000" />
+      <workItem from="1484977214195" duration="4730000" />
+      <workItem from="1484982084955" duration="9496000" />
+      <workItem from="1485002693371" duration="349000" />
+      <workItem from="1485003071711" duration="9411000" />
+      <workItem from="1485016509569" duration="4850000" />
+      <workItem from="1485023677689" duration="2416000" />
+      <workItem from="1485026369740" duration="932000" />
+      <workItem from="1485067755092" duration="1817000" />
+      <workItem from="1485070684025" duration="3235000" />
+      <workItem from="1485074661005" duration="6010000" />
+      <workItem from="1485092682815" duration="8219000" />
+      <workItem from="1485104511844" duration="8910000" />
+      <workItem from="1485114209954" duration="544000" />
+      <workItem from="1485155009140" duration="4711000" />
+      <workItem from="1485166395852" duration="6107000" />
+      <workItem from="1485178300758" duration="5043000" />
+      <workItem from="1485184069919" duration="659000" />
+      <workItem from="1485191151382" duration="1932000" />
+      <workItem from="1485193118116" duration="59000" />
+      <workItem from="1485280424037" duration="2578000" />
+      <workItem from="1485285741491" duration="1648000" />
+      <workItem from="1485287426745" duration="56000" />
+      <workItem from="1485355657488" duration="3243000" />
+      <workItem from="1485367318533" duration="2201000" />
+      <workItem from="1485422832166" duration="5544000" />
+      <workItem from="1485430691891" duration="5347000" />
+      <workItem from="1485440452020" duration="2667000" />
+      <workItem from="1485443182359" duration="2370000" />
+      <workItem from="1485451539978" duration="5899000" />
+      <workItem from="1485457530553" duration="23000" />
+      <workItem from="1485500631749" duration="7075000" />
+      <workItem from="1485507760113" duration="6600000" />
+      <workItem from="1485514412310" duration="112000" />
+      <workItem from="1485517520449" duration="213000" />
+      <workItem from="1485596431486" duration="1365000" />
+      <workItem from="1485797306130" duration="454000" />
+      <workItem from="1485889112707" duration="1137000" />
+      <workItem from="1486030048618" duration="1663000" />
+      <workItem from="1486032045477" duration="674000" />
+      <workItem from="1577611561351" duration="1102000" />
+      <workItem from="1577612736998" duration="4683000" />
+      <workItem from="1577617931590" duration="749000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577612048892">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1577612048892" />
+    <state x="699" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577612424925">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="699" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1577612424925" />
+    <state x="810" y="414" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1577611565282">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="810" y="414" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1577611565282" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577615212919">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1577615212919" />
+    <state width="1877" height="142" key="GridCell.Tab.0.bottom" timestamp="1577618680489">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="142" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1577618680489" />
+    <state width="1877" height="142" key="GridCell.Tab.0.center" timestamp="1577618680489">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="142" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1577618680489" />
+    <state width="1877" height="142" key="GridCell.Tab.0.left" timestamp="1577618680489">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="142" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1577618680489" />
+    <state width="1877" height="142" key="GridCell.Tab.0.right" timestamp="1577618680489">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="142" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1577618680489" />
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1577618035787">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1577618035787" />
+    <state x="939" y="82" width="646" height="813" key="find.popup" timestamp="1577618133625">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="939" y="82" width="646" height="813" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1577618133625" />
+    <state x="616" y="178" width="672" height="676" key="search.everywhere.popup" timestamp="1577618118082">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="178" width="672" height="676" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1577618118082" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>WorldOfTanks:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>WorldOfTanks</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
