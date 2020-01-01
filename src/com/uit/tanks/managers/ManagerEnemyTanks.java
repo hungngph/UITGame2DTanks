@@ -96,7 +96,7 @@ public class ManagerEnemyTanks implements IAttributeConstants {
                         break;
                     }
                     case 3: {
-                        assistantEnemyTankArray[i].initNewEnemyTank(353, 216, iOnExplosions, iOnBullets);
+                        assistantEnemyTankArray[i].initNewEnemyTank(353, 316, iOnExplosions, iOnBullets);
                         break;
                     }
                     default:

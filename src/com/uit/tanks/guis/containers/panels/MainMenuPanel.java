@@ -42,7 +42,7 @@ public class MainMenuPanel extends JPanel implements IAttributeConstants, IIconC
 
     private void initLabelMenu() {
         labelMainMenu = new JLabel();
-        labelMainMenu.setLocation(483, 30);
+        labelMainMenu.setLocation(483, 50);
         labelMainMenu.setText("<html><p align=\"center\">MAIN MENU");
         labelMainMenu.setForeground(Color.RED);
 
@@ -50,22 +50,21 @@ public class MainMenuPanel extends JPanel implements IAttributeConstants, IIconC
         labelMainMenu.setFont(fontLabelMenu);
 
         FontMetrics mtLabelTutorial = getFontMetrics(fontLabelMenu);
-        int widthlabelMenu = mtLabelTutorial.stringWidth("MAIN MENU");
+        int widthlabelMenu = mtLabelTutorial.stringWidth(" MAIN MENU ");
         labelMainMenu.setSize(widthlabelMenu, 50);
     }
 
     private void initButtons() {
         bt1Player = new MyButton(BUTTON_1PLAYER, BUTTON_1PLAYER1,
-                300, 50, 488, 125);
+                300, 50, 488, 225);
         btControls = new MyButton(BUTTON_CONTROLS, BUTTON_CONTROLS1,
-                300, 50, 488, 425);
+                300, 50, 488, 325);
         btExit = new MyButton(BUTTON_EXIT, BUTTON_EXIT1,
-                300, 50, 488, 625);
+                300, 50, 488, 425);
     }
 
     private void addComponents() {
         add(labelMainMenu);
-
         add(bt1Player);
         add(btControls);
         add(btExit);

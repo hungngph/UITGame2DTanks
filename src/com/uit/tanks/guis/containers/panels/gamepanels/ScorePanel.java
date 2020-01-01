@@ -66,28 +66,27 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
         labelScore.setFont(fontLabelScore);
 
         FontMetrics mtLabelScore = getFontMetrics(fontLabelScore);
-        int widthlabelScore = mtLabelScore.stringWidth("SCORE: "); // width = 155, height = 55
+        int widthlabelScore = mtLabelScore.stringWidth("SCORE: ");
         labelScore.setSize(widthlabelScore, 45);
 
         labelPlayer = new JLabel();
-        labelPlayer.setLocation(150, 30);
-        labelPlayer.setText("<html><p align=\"center\">PLAYER");
+        labelPlayer.setLocation(70, 30);
+        labelPlayer.setText("<html><p align=\"center\">Đồ án: Ngôn ngữ lập trình Java - SE330.K11\n");
         labelPlayer.setForeground(Color.GREEN);
 
-        Font fontLabelPlayer = new Font("Tahoma", Font.BOLD, 45);
+        Font fontLabelPlayer = new Font("Tahoma", Font.BOLD, 15);
         labelPlayer.setFont(fontLabelPlayer);
 
         FontMetrics mtLabelPlayer = getFontMetrics(fontLabelPlayer);
-        int widthlabelPlayer = mtLabelPlayer.stringWidth("PLAYER");
+        int widthlabelPlayer = mtLabelPlayer.stringWidth(" Đồ án: Ngôn ngữ lập trình Java - SE330.K11    ");
         labelPlayer.setSize(widthlabelPlayer, 45);
     }
 
     private void initButtons() {
         btPause = new MyButton(BUTTON_PAUSE, BUTTON_PAUSE1,
-                300, 50, 95, 500);
+                300, 50, 95, 550);
         btPause.setLayout(null);
         labelPause = new MyLabel("OFF", 240, 5);
-
         btMainMenu = new MyButton(BUTTON_MENU, BUTTON_MENU1,
                 300, 50, 95, 650);
     }
@@ -95,17 +94,14 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
     private void addComponents() {
         add(labelScore);
         add(labelPlayer);
-
         add(btPause);
         add(btMainMenu);
-
         btPause.add(labelPause);
     }
 
     private void addEvents() {
         btPause.addActionListener(this);
         btPause.setActionCommand(PAUSE_BUTTON);
-
         btMainMenu.addActionListener(this);
         btMainMenu.setActionCommand(MAIN_MENU_BUTTON);
     }

@@ -58,7 +58,7 @@ public class PlayPanel extends JPanel implements IAttributeConstants, IImageCons
     private void initManagersGameItems() {
         managerExplosions = new ManagerExplosions();
 
-        managerImmovableItems = new ManagerImmovableItems(MAP_PLAY + (new Random().nextInt(5) + 1) + ".txt",
+        managerImmovableItems = new ManagerImmovableItems(MAP_PLAY + 1 + ".txt", //(new Random().nextInt(5) + 1)
                 ROW_PLAYMAP, COLUMN_PLAYMAP, managerExplosions);
         managerBird = new ManagerBird();
         managerHearts = new ManagerHearts(managerExplosions);
