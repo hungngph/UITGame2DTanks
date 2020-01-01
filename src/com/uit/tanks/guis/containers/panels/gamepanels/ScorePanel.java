@@ -212,12 +212,12 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
                 break;
             }
             case 6: {
-                graphics2D.drawImage(MYTANK_UP, 45, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 114, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 183, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 252, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 321, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 390, 220, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 45, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 114, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 183, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 252, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 321, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 390, 320, 50, 50, null);
                 break;
             }
             default: {
