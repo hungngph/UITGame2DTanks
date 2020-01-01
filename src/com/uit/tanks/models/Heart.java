@@ -27,7 +27,6 @@ public class Heart extends GameItem implements IImageConstants {
         graphics2D.setColor(Color.YELLOW);
         graphics2D.setStroke(new BasicStroke(3));
         graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        graphics2D.drawOval(x, y, width, height);
     }
 
     public void destroyedHeart() {
