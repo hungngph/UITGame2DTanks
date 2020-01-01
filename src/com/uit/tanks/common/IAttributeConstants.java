@@ -39,7 +39,6 @@ public interface IAttributeConstants {
     int LIFE_MYTANK = 3;
     int X_MYTANK_DEFAULT = 10 * ITEM_SIZE + 10;
     int Y_MYTANK_DEFAULT = 25 * ITEM_SIZE + 10;
-    int MYTANK_TURN_DELTA = 3000;
 
     int ENEMYTANK_SPEED = 9;
     int LIFE_ENEMYTANK = 5;

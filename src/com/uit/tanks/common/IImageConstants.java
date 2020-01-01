@@ -7,6 +7,7 @@ import java.awt.*;
 public interface IImageConstants {
     Image BACKGROUND1 = MyImageIcon.getImage("/resources/images/tank_background(1).jpg");
     Image BACKGROUND2 = MyImageIcon.getImage("/resources/images/tank_background(2).jpg");
+    Image LOGO_UIT = MyImageIcon.getImage("/resources/images/logo-uit.png");
 
     int LEFT = 0;
     int RIGHT = 1;

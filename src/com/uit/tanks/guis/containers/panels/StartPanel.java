@@ -17,6 +17,8 @@ public class StartPanel extends JPanel implements IAttributeConstants, IIconCons
     private JButton btStart;
     private JButton btExit;
 
+    private JLabel labelStart;
+
     private IActionEnterGame iActionEnterGame;
     private IActionExitGame iActionExitGame;
 
@@ -31,14 +33,30 @@ public class StartPanel extends JPanel implements IAttributeConstants, IIconCons
         setLayout(null);
     }
 
+    private void initLabelStart() {
+        labelStart = new JLabel();
+        labelStart.setLocation(223, 50);
+        labelStart.setText("<html><p align=\"center\">Welcome To UITGame2DTanks !");
+        labelStart.setForeground(Color.BLUE);
+
+        Font fontLabelMenu = new Font("Tahoma", Font.BOLD, 50);
+        labelStart.setFont(fontLabelMenu);
+
+        FontMetrics mtLabelTutorial = getFontMetrics(fontLabelMenu);
+        int widthlabelMenu = mtLabelTutorial.stringWidth(" Welcome To UITGame2DTanks ! ");
+        labelStart.setSize(widthlabelMenu, 50);
+    }
+
     private void initComponents() {
+        initLabelStart();
         btStart = new MyButton(BUTTON_START, BUTTON_START1,
-                300, 50, 488, 325);
-        btExit = new MyButton(BUTTON_EXIT, BUTTON_EXIT1,
                 300, 50, 488, 425);
+        btExit = new MyButton(BUTTON_EXIT, BUTTON_EXIT1,
+                300, 50, 488, 525);
     }
 
     private void addComponents() {
+        add(labelStart);
         add(btStart);
         add(btExit);
     }
@@ -55,6 +73,7 @@ public class StartPanel extends JPanel implements IAttributeConstants, IIconCons
     protected void paintComponent(Graphics g) {
         Graphics2D graphics2D = (Graphics2D) g;
         graphics2D.drawImage(BACKGROUND1, 0, 0, WIDTH_FRAME, HEIGHT_FRAME, null);
+        graphics2D.drawImage(LOGO_UIT, 520, 115, 250, 200, null);
     }
 
     @Override

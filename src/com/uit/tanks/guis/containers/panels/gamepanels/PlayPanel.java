@@ -7,8 +7,9 @@ import com.uit.tanks.managers.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class PlayPanel extends JPanel implements IAttributeConstants, IImageConstants,
         Runnable, IActionThread, IActionShowGame {
