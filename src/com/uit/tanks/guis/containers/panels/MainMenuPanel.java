@@ -44,7 +44,7 @@ public class MainMenuPanel extends JPanel implements IAttributeConstants, IIconC
         labelMainMenu = new JLabel();
         labelMainMenu.setLocation(483, 50);
         labelMainMenu.setText("<html><p align=\"center\">MAIN MENU");
-        labelMainMenu.setForeground(Color.RED);
+        labelMainMenu.setForeground(Color.BLUE);
 
         Font fontLabelMenu = new Font("Tahoma", Font.BOLD, 50);
         labelMainMenu.setFont(fontLabelMenu);

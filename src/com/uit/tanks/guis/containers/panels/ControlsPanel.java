@@ -46,9 +46,9 @@ public class ControlsPanel extends JPanel implements IAttributeConstants, IIconC
 
     private void initLabelControls() {
         labelControls = new JLabel();
-        labelControls.setLocation(483, 30);
+        labelControls.setLocation(490, 30);
         labelControls.setText("<html><p align=\"center\">CONTROLS");
-        labelControls.setForeground(Color.RED);
+        labelControls.setForeground(Color.BLUE);
 
         Font fontLabelControls = new Font("Tahoma", Font.BOLD, 50);
         labelControls.setFont(fontLabelControls);

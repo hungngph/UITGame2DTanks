@@ -20,7 +20,11 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
     private ManagerImmovableItems managerImmovableItems;
 
     private JLabel labelScore;
-    private JLabel labelPlayer;
+    private JLabel labelCourse;
+    private JLabel labelLecturer;
+    private JLabel labelAuthor;
+    private JLabel labelAuthor1;
+    private JLabel labelAuthor2;
     private JLabel labelPause;
 
     private JButton btPause;
@@ -58,9 +62,9 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
 
     private void initLabelPlayer() {
         labelScore = new JLabel();
-        labelScore.setLocation(100, 120);
+        labelScore.setLocation(100, 220);
         labelScore.setText("<html><p align=\"center\">SCORE: ");
-        labelScore.setForeground(Color.GREEN);
+        labelScore.setForeground(Color.BLUE);
 
         Font fontLabelScore = new Font("Tahoma", Font.BOLD, 45);
         labelScore.setFont(fontLabelScore);
@@ -69,17 +73,65 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
         int widthlabelScore = mtLabelScore.stringWidth("SCORE: ");
         labelScore.setSize(widthlabelScore, 45);
 
-        labelPlayer = new JLabel();
-        labelPlayer.setLocation(70, 30);
-        labelPlayer.setText("<html><p align=\"center\">Đồ án: Ngôn ngữ lập trình Java - SE330.K11\n");
-        labelPlayer.setForeground(Color.GREEN);
+        labelCourse = new JLabel();
+        labelCourse.setLocation(70, 30);
+        labelCourse.setText("<html><p align=\"center\">Đồ án môn: Ngôn ngữ lập trình Java - SE330.K11\n");
+        labelCourse.setForeground(Color.GREEN);
 
-        Font fontLabelPlayer = new Font("Tahoma", Font.BOLD, 15);
-        labelPlayer.setFont(fontLabelPlayer);
+        Font fontLabelCourse = new Font("Tahoma", Font.BOLD, 15);
+        labelCourse.setFont(fontLabelCourse);
 
-        FontMetrics mtLabelPlayer = getFontMetrics(fontLabelPlayer);
-        int widthlabelPlayer = mtLabelPlayer.stringWidth(" Đồ án: Ngôn ngữ lập trình Java - SE330.K11    ");
-        labelPlayer.setSize(widthlabelPlayer, 45);
+        FontMetrics mtLabelCourse = getFontMetrics(fontLabelCourse);
+        int widthlabelPlayer = mtLabelCourse.stringWidth(" Đồ án môn: Ngôn ngữ lập trình Java - SE330.K11    ");
+        labelCourse.setSize(widthlabelPlayer, 45);
+
+        labelLecturer = new JLabel();
+        labelLecturer.setLocation(70, 60);
+        labelLecturer.setText("<html><p align=\"center\">Giáo viên hướng dẫn: Th.S Lê Thanh Trọng\n");
+        labelLecturer.setForeground(Color.GREEN);
+
+        Font fontLabelLecturer = new Font("Tahoma", Font.BOLD, 15);
+        labelLecturer.setFont(fontLabelLecturer);
+
+        FontMetrics mtLabelLecturer = getFontMetrics(fontLabelLecturer);
+        int widthlabelLecturer = mtLabelLecturer.stringWidth(" Giáo viên hướng dẫn: Th.S Lê Thanh Trọng      ");
+        labelLecturer.setSize(widthlabelLecturer, 45);
+
+        labelAuthor = new JLabel();
+        labelAuthor.setLocation(70, 90);
+        labelAuthor.setText("<html><p align=\"center\">Nhóm thực hiện: \n");
+        labelAuthor.setForeground(Color.GREEN);
+
+        Font fontLabelAuthor = new Font("Tahoma", Font.BOLD, 15);
+        labelAuthor.setFont(fontLabelAuthor);
+
+        FontMetrics mtLabelAuthor = getFontMetrics(fontLabelAuthor);
+        int widthlabelAuthor = mtLabelAuthor.stringWidth(" Nhóm thực hiện:       ");
+        labelAuthor.setSize(widthlabelAuthor, 45);
+
+        labelAuthor1 = new JLabel();
+        labelAuthor1.setLocation(90, 120);
+        labelAuthor1.setText("<html><p align=\"center\">+ Nguyễn Phi Hùng - 17520068 \n");
+        labelAuthor1.setForeground(Color.GREEN);
+
+        Font fontLabelAuthor1 = new Font("Tahoma", Font.BOLD, 15);
+        labelAuthor1.setFont(fontLabelAuthor1);
+
+        FontMetrics mtLabelAuthor1 = getFontMetrics(fontLabelAuthor1);
+        int widthlabelAuthor1 = mtLabelAuthor1.stringWidth(" + Nguyễn Phi Hùng - 17520068      ");
+        labelAuthor1.setSize(widthlabelAuthor1, 45);
+
+        labelAuthor2 = new JLabel();
+        labelAuthor2.setLocation(90, 150);
+        labelAuthor2.setText("<html><p align=\"center\">+ Nguyễn Duy Hoài Sơn - 17520148 \n");
+        labelAuthor2.setForeground(Color.GREEN);
+
+        Font fontLabelAuthor2 = new Font("Tahoma", Font.BOLD, 15);
+        labelAuthor2.setFont(fontLabelAuthor2);
+
+        FontMetrics mtLabelAuthor2 = getFontMetrics(fontLabelAuthor2);
+        int widthlabelAuthor2 = mtLabelAuthor2.stringWidth(" + Nguyễn Duy Hoài Sơn - 17520148      ");
+        labelAuthor2.setSize(widthlabelAuthor2, 45);
     }
 
     private void initButtons() {
@@ -93,7 +145,11 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
 
     private void addComponents() {
         add(labelScore);
-        add(labelPlayer);
+        add(labelCourse);
+        add(labelLecturer);
+        add(labelAuthor);
+        add(labelAuthor1);
+        add(labelAuthor2);
         add(btPause);
         add(btMainMenu);
         btPause.add(labelPause);
@@ -120,39 +176,39 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
     private void drawScore(Graphics2D graphics2D) {
         graphics2D.setColor(Color.WHITE);
         graphics2D.setFont(new Font("Tahoma", Font.BOLD, 45));
-        graphics2D.drawString("" + iActionShowGame.getScore(), 300, 160);
+        graphics2D.drawString("" + iActionShowGame.getScore(), 300, 260);
     }
 
     private void drawLifeMyTank(Graphics2D graphics2D) {
         switch (iActionShowGame.getRealLifeMyTank()) {
             case 1: {
-                graphics2D.drawImage(MYTANK_UP, 220, 220, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 220, 320, 50, 50, null);
                 break;
             }
             case 2: {
-                graphics2D.drawImage(MYTANK_UP, 183, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 252, 220, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 183, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 252, 320, 50, 50, null);
                 break;
             }
             case 3: {
-                graphics2D.drawImage(MYTANK_UP, 151, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 220, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 289, 220, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 151, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 220, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 289, 320, 50, 50, null);
                 break;
             }
             case 4: {
-                graphics2D.drawImage(MYTANK_UP, 114, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 183, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 252, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 321, 220, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 114, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 183, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 252, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 321, 320, 50, 50, null);
                 break;
             }
             case 5: {
-                graphics2D.drawImage(MYTANK_UP, 82, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 151, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 220, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 289, 220, 50, 50, null);
-                graphics2D.drawImage(MYTANK_UP, 358, 220, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 82, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 151, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 220, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 289, 320, 50, 50, null);
+                graphics2D.drawImage(MYTANK_UP, 358, 320, 50, 50, null);
                 break;
             }
             case 6: {
@@ -173,18 +229,18 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
     private void drawLifeBird(Graphics2D graphics2D) {
         switch (iActionShowGame.getRealLifeBird()) {
             case 1: {
-                graphics2D.drawImage(BIRD, 220, 320, 50, 50, null);
+                graphics2D.drawImage(BIRD, 220, 420, 50, 50, null);
                 break;
             }
             case 2: {
-                graphics2D.drawImage(BIRD, 183, 320, 50, 50, null);
-                graphics2D.drawImage(BIRD, 252, 320, 50, 50, null);
+                graphics2D.drawImage(BIRD, 183, 420, 50, 50, null);
+                graphics2D.drawImage(BIRD, 252, 420, 50, 50, null);
                 break;
             }
             case 3: {
-                graphics2D.drawImage(BIRD, 151, 320, 50, 50, null);
-                graphics2D.drawImage(BIRD, 220, 320, 50, 50, null);
-                graphics2D.drawImage(BIRD, 289, 320, 50, 50, null);
+                graphics2D.drawImage(BIRD, 151, 420, 50, 50, null);
+                graphics2D.drawImage(BIRD, 220, 420, 50, 50, null);
+                graphics2D.drawImage(BIRD, 289, 420, 50, 50, null);
                 break;
             }
             default: {

@@ -15,8 +15,6 @@ public interface IIconConstants {
     Icon BUTTON_CONTROLS1 = MyImageIcon.getIcon("/resources/images/buttons/button_controls(1).png");
     Icon BUTTON_MENU = MyImageIcon.getIcon("/resources/images/buttons/button_menu.png");
     Icon BUTTON_MENU1 = MyImageIcon.getIcon("/resources/images/buttons/button_menu(1).png");
-    Icon BUTTON_PLAYER1 = MyImageIcon.getIcon("/resources/images/buttons/button_player1.png");
-    Icon BUTTON_PLAYER11 = MyImageIcon.getIcon("/resources/images/buttons/button_player1(1).png");
     Icon BUTTON_LEFT = MyImageIcon.getIcon("/resources/images/buttons/buttonleft.png");
     Icon BUTTON_LEFT1 = MyImageIcon.getIcon("/resources/images/buttons/buttonleft(1).png");
     Icon BUTTON_RIGHT = MyImageIcon.getIcon("/resources/images/buttons/buttonright.png");
