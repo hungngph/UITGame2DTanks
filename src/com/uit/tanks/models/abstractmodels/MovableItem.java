@@ -12,6 +12,7 @@ import com.uit.tanks.models.tankcomponents.EnemyTank;
 import com.uit.tanks.models.tankcomponents.MyTank;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class MovableItem extends GameItem implements IAttributeConstants, IImageConstants {
@@ -24,7 +25,13 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
         this.speed = speed;
         this.orient = orient;
     }
-
+    public void setxy(int x, int y, int width, int height)
+    {
+        this.x=x;
+        this.y=y;
+        this.width =width;
+        this.height = height;
+    }
     public void setOrient(int orient) {
         this.orient = orient;
     }
@@ -229,11 +236,20 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
     private int checkIsDestroyedWithEnemyTank(AssistantEnemyTank[] assistantEnemyTankArray,
                                               IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
         EnemyTank enemyTank = interSectWithEnemyTanks(assistantEnemyTankArray);
+        List<Integer> xList = new ArrayList<>();
+
+        for(int i=0; i<assistantEnemyTankArray.length; i++)
+            if(assistantEnemyTankArray[i]!=null){
+                if(assistantEnemyTankArray[i].getEnemyTank()!=enemyTank)
+                    xList.add(assistantEnemyTankArray[i].getEnemyTank().getX());
+            }
+
         if (null != enemyTank) {
             enemyTank.setIsDestroy();
             enemyTank.destroyedEnemyTank();
             if (enemyTank.getLifeEnemyTank() > 0) {
-                enemyTank.initNewMyTank(iOnExplosions, iOnBullets);
+
+                enemyTank.initRivivalEnemy(xList,iOnExplosions, iOnBullets);
             } else {
                 enemyTank.getAssistantEnemyTank().destroyAssistantEnemyTank();
                 if (0 == enemyTank.getAssistantEnemyTank().getNumberEnemyTanks()) {
@@ -243,6 +259,10 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
             return 1;
         }
         return 0;
+    }
+
+    public int getOrient() {
+        return orient;
     }
 
     protected EnemyTank interSectWithEnemyTanks(AssistantEnemyTank[] assistantEnemyTankArray) {

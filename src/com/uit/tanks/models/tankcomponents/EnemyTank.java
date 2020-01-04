@@ -10,6 +10,7 @@ import com.uit.tanks.models.listenermanagers.IOnBullets;
 
 import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 public class EnemyTank extends Tank {
     private IOnEnemyTanks iOnEnemyTanks;
@@ -46,8 +47,13 @@ public class EnemyTank extends Tank {
     public void draw(Graphics2D graphics2D) {
         graphics2D.drawImage(getImage(orient), x, y, width, height, null);
     }
-
-    public void moveEnemyTank(int time, ImmovableItem[][] immovableItems, MyTank myTank, Bird bird, Heart[] hearts) {
+    public void moveEnemyT()
+    {
+        int orient = 1;
+        this.orient = orient;
+        setOrient(orient);
+    }
+    public void moveEnemyTank(int time, AssistantEnemyTank[] assistantEnemyTankArray, ImmovableItem[][] immovableItems, MyTank myTank, Bird bird, Heart[] hearts) {
         if (0 == time % ENEMYTANK_TURN_DELTA) {
             int i = new Random().nextInt(3) + 1;
             int orient = (this.orient + i) % ORIENT_MAX;
@@ -69,6 +75,14 @@ public class EnemyTank extends Tank {
             this.orient = orient;
             setOrient(orient);
         }
+        EnemyTank enemy = interSectWithEnemyTanks(assistantEnemyTankArray);
+        if (null != enemy) {
+            int i = new Random().nextInt(3) + 1;
+            int orient = (this.orient + i) % ORIENT_MAX;
+            this.orient = orient;
+            setOrient(orient);
+        }
+
         Bird bird1 = interSectWithBird(bird);
         if (null != bird1) {
             int i = new Random().nextInt(3) + 1;
@@ -92,9 +106,11 @@ public class EnemyTank extends Tank {
     }
 
     public void initNewMyTank(IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
-        iOnEnemyTanks.initNewEnemyTank(iOnExplosions, iOnBullets);
+       iOnEnemyTanks.initNewEnemyTank(iOnExplosions, iOnBullets);
     }
-
+    public void initRivivalEnemy(List<Integer> xList, IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
+        iOnEnemyTanks.initRivivalEnemyTank(xList, iOnExplosions, iOnBullets);
+    }
     public int getLifeEnemyTank() {
         return iOnEnemyTanks.getLifeEnemyTank();
     }

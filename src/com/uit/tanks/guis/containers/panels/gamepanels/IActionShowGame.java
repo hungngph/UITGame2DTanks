@@ -5,6 +5,8 @@ public interface IActionShowGame {
 
     void ignorePlayPanel();
 
+    int getLifeEnemy();
+
     int getScore();
 
     int getRealLifeMyTank();

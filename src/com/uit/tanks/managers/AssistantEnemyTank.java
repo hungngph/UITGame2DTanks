@@ -12,6 +12,9 @@ import com.uit.tanks.models.listenermanagers.IOnBullets;
 import com.uit.tanks.models.tankcomponents.MyTank;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class AssistantEnemyTank implements IOnEnemyTanks, IAttributeConstants, IImageConstants {
     private EnemyTank enemyTank;
@@ -33,10 +36,15 @@ public class AssistantEnemyTank implements IOnEnemyTanks, IAttributeConstants, I
         }
     }
 
-    public void moveEnemyTank(int time, ImmovableItem[][] immovableItems,
+    public void moveEnemyTank(int time, AssistantEnemyTank[] assistantEnemyTankArray, ImmovableItem[][] immovableItems,
                               MyTank myTank, Bird bird, Heart[] hearts) {
         if (null != enemyTank) {
-            enemyTank.moveEnemyTank(time, immovableItems, myTank, bird, hearts);
+            enemyTank.moveEnemyTank(time,assistantEnemyTankArray, immovableItems, myTank, bird, hearts);
+        }
+    }
+    public void moveEnemyT( ) {
+        if (null != enemyTank) {
+            enemyTank.moveEnemyT();
         }
     }
 
@@ -65,15 +73,66 @@ public class AssistantEnemyTank implements IOnEnemyTanks, IAttributeConstants, I
         return enemyTank;
     }
 
+    public boolean setxx(int x, int y)
+    {
+        if(x<=y && x+TANK_SIZE >=y)
+            return false;
+        if(x>=y && x-TANK_SIZE <=y)
+            return false;
+
+        return true;
+    }
+
+    @Override
+    public void initRivivalEnemyTank(List<Integer> xList,IOnExplosions iOnExplosions, IOnBullets iOnBullets )
+    {
+        List<Integer> xEnemyTank;
+        xEnemyTank = new ArrayList<>();
+        xEnemyTank.add(30);
+        xEnemyTank.add(175);
+        xEnemyTank.add(540);
+        xEnemyTank.add(675);
+        int xEnemy = xEnemyTank.get(0);
+        for(int j=1; j<=3; j++) {
+            boolean k=true;
+            for (int i = 0; i < xList.size(); i++) {
+                if (!setxx(xEnemy,xList.get(i)))
+                {
+                    k=false;
+                    break;
+                }
+            }
+            if(k) break;
+            xEnemy = xEnemyTank.get(j);
+        }
+
+        int yEnemy = 30;
+        enemyTank = new EnemyTank(xEnemy, yEnemy, TANK_SIZE, TANK_SIZE, ENEMYTANK_SPEED, DOWN,
+                iOnExplosions, iOnBullets, this);
+    }
     @Override
     public void initNewEnemyTank(IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
-        enemyTank = new EnemyTank(X_ENEMYTANK_DEFAULT, Y_ENEMYTANK_DEFAULT, TANK_SIZE, TANK_SIZE, ENEMYTANK_SPEED, DOWN,
+        List<Integer> xEnemyTank;
+        xEnemyTank = new ArrayList<>();
+        xEnemyTank.add(30);
+        xEnemyTank.add(90);
+        xEnemyTank.add(525);
+        xEnemyTank.add(675);
+        int xEnemy = xEnemyTank.get(1);
+        int yEnemy = 30;
+        enemyTank = new EnemyTank(xEnemy, yEnemy, TANK_SIZE, TANK_SIZE, ENEMYTANK_SPEED, DOWN,
                 iOnExplosions, iOnBullets, this);
+
     }
 
     @Override
     public int getLifeEnemyTank() {
         lifeEnemyTank--;
+        return lifeEnemyTank;
+    }
+
+    @Override
+    public int getLifeEnemy() {
         return lifeEnemyTank;
     }
 

@@ -136,7 +136,7 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
 
     private void initButtons() {
         btPause = new MyButton(BUTTON_PAUSE, BUTTON_PAUSE1,
-                300, 50, 95, 550);
+                300, 50, 95, 590);
         btPause.setLayout(null);
         labelPause = new MyLabel("OFF", 240, 5);
         btMainMenu = new MyButton(BUTTON_MENU, BUTTON_MENU1,
@@ -170,6 +170,7 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
         drawScore(graphics2D);
         drawLifeMyTank(graphics2D);
         drawLifeBird(graphics2D);
+        drawLifeEnemy(graphics2D);
         repaint();
     }
 
@@ -178,7 +179,13 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
         graphics2D.setFont(new Font("Tahoma", Font.BOLD, 45));
         graphics2D.drawString("" + iActionShowGame.getScore(), 300, 260);
     }
-
+    private void drawLifeEnemy(Graphics2D graphics2D)
+    {
+        graphics2D.drawImage(ENEMYTANK_UP, 183, 500, 50, 50, null);
+        graphics2D.setColor(Color.WHITE);
+        graphics2D.setFont(new Font("Tahoma", Font.BOLD, 45));
+        graphics2D.drawString("" + iActionShowGame.getLifeEnemy(), 270, 540);
+    }
     private void drawLifeMyTank(Graphics2D graphics2D) {
         switch (iActionShowGame.getRealLifeMyTank()) {
             case 1: {

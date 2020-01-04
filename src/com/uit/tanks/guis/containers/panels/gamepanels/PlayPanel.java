@@ -310,7 +310,10 @@ public class PlayPanel extends JPanel implements IAttributeConstants, IImageCons
     public int getScore() {
         return managerMyBullets.getScore();
     }
-
+    @Override
+    public int getLifeEnemy() {
+        return managerEnemyTanks.getNumberEnemyTank();
+    }
     @Override
     public int getRealLifeMyTank() {
         return managerMyTank.getRealLifeMyTank();
