@@ -3,14 +3,14 @@ package com.uit.tanks.models.tankcomponents;
 import com.uit.tanks.managers.AssistantEnemyTank;
 import com.uit.tanks.models.Bird;
 import com.uit.tanks.models.Heart;
-import com.uit.tanks.models.listenermanagers.IOnEnemyTanks;
-import com.uit.tanks.models.listenermanagers.IOnExplosions;
 import com.uit.tanks.models.ImmovableItem;
 import com.uit.tanks.models.listenermanagers.IOnBullets;
+import com.uit.tanks.models.listenermanagers.IOnEnemyTanks;
+import com.uit.tanks.models.listenermanagers.IOnExplosions;
 
 import java.awt.*;
-import java.util.*;
 import java.util.List;
+import java.util.Random;
 
 public class EnemyTank extends Tank {
     private IOnEnemyTanks iOnEnemyTanks;
@@ -47,12 +47,7 @@ public class EnemyTank extends Tank {
     public void draw(Graphics2D graphics2D) {
         graphics2D.drawImage(getImage(orient), x, y, width, height, null);
     }
-    public void moveEnemyT()
-    {
-        int orient = 1;
-        this.orient = orient;
-        setOrient(orient);
-    }
+
     public void moveEnemyTank(int time, AssistantEnemyTank[] assistantEnemyTankArray, ImmovableItem[][] immovableItems, MyTank myTank, Bird bird, Heart[] hearts) {
         if (0 == time % ENEMYTANK_TURN_DELTA) {
             int i = new Random().nextInt(3) + 1;
@@ -105,12 +100,10 @@ public class EnemyTank extends Tank {
         }
     }
 
-    public void initNewMyTank(IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
-       iOnEnemyTanks.initNewEnemyTank(iOnExplosions, iOnBullets);
-    }
     public void initRivivalEnemy(List<Integer> xList, IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
         iOnEnemyTanks.initRivivalEnemyTank(xList, iOnExplosions, iOnBullets);
     }
+
     public int getLifeEnemyTank() {
         return iOnEnemyTanks.getLifeEnemyTank();
     }

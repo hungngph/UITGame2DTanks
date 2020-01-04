@@ -33,13 +33,13 @@ public class ManagerEnemyTanks implements IAttributeConstants {
     public void moveAllEnemyTanks(int time, ImmovableItem[][] immovableItems, MyTank myTank, Bird bird, Heart[] hearts) {
         for (int i = 0; i < assistantEnemyTankArray.length; i++) {
             if (null != assistantEnemyTankArray[i]) {
-                AssistantEnemyTank[] ass = new AssistantEnemyTank[assistantEnemyTankArray.length-1];
-                for (int j = 0; j < assistantEnemyTankArray.length-1; j++)
-                    ass[j]=assistantEnemyTankArray[j];
-                    if(i!=assistantEnemyTankArray.length-1)
-                        ass[i]=assistantEnemyTankArray[assistantEnemyTankArray.length-1];
+                AssistantEnemyTank[] ass = new AssistantEnemyTank[assistantEnemyTankArray.length - 1];
+                for (int j = 0; j < assistantEnemyTankArray.length - 1; j++)
+                    ass[j] = assistantEnemyTankArray[j];
+                if (i != assistantEnemyTankArray.length - 1)
+                    ass[i] = assistantEnemyTankArray[assistantEnemyTankArray.length - 1];
 
-                    assistantEnemyTankArray[i].moveEnemyTank(time,ass, immovableItems, myTank, bird, hearts);
+                assistantEnemyTankArray[i].moveEnemyTank(time, ass, immovableItems, myTank, bird, hearts);
             }
         }
     }
@@ -56,12 +56,13 @@ public class ManagerEnemyTanks implements IAttributeConstants {
         numberEnemyTanks--;
         return numberEnemyTanks;
     }
+
     public int getNumberEnemyTank() {
-        int s=0;
+        int s = 0;
         for (int i = 0; i < assistantEnemyTankArray.length; i++)
-            if(assistantEnemyTankArray[i]!=null)
-            s=s + assistantEnemyTankArray[i].getLifeEnemy();
-            return s;
+            if (assistantEnemyTankArray[i] != null)
+                s = s + assistantEnemyTankArray[i].getLifeEnemy();
+        return s;
     }
 
     public void removeAssistantEnemyTank(AssistantEnemyTank assistantEnemyTank) {

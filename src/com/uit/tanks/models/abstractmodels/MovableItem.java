@@ -25,13 +25,7 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
         this.speed = speed;
         this.orient = orient;
     }
-    public void setxy(int x, int y, int width, int height)
-    {
-        this.x=x;
-        this.y=y;
-        this.width =width;
-        this.height = height;
-    }
+
     public void setOrient(int orient) {
         this.orient = orient;
     }
@@ -82,7 +76,6 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
         return WIDTH_PLAY_PANEL - width <= x || 0 >= x || HEIGHT_FRAME - height <= y || 0 >= y;
     }
 
-    // Va chạm với ImmovableItem
     public int destroyedWithImmovableItem(ImmovableItem[][] immovableItems) {
         int result = checkIsDestroyedWithImmovableItem(immovableItems);
         if (0 != result) {
@@ -223,7 +216,6 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
 
     protected abstract boolean isInterSectWithImmovableItem(ImmovableItem immovableItem);
 
-    // Va chạm với các EnemyTank
     public int destroyedWithEnemyTank(AssistantEnemyTank[] assistantEnemyTankArray,
                                       IOnExplosions iOnExplosions1, IOnBullets iOnBullets) {
         int result = checkIsDestroyedWithEnemyTank(assistantEnemyTankArray, iOnExplosions1, iOnBullets);
@@ -259,10 +251,6 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
             return 1;
         }
         return 0;
-    }
-
-    public int getOrient() {
-        return orient;
     }
 
     protected EnemyTank interSectWithEnemyTanks(AssistantEnemyTank[] assistantEnemyTankArray) {
@@ -307,7 +295,6 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
         return null;
     }
 
-    // Va chạm với MyTank
     public int destroyedWithMyTank(MyTank myTank, IOnExplosions iOnExplosions1, IOnBullets iOnBullets) {
         int result = checkIsDestroyedWithMyTank(myTank, iOnExplosions1, iOnBullets);
         if (0 != result) {
@@ -365,7 +352,6 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
         return null;
     }
 
-    // Va chạm với Bird
     public int destroyedWithBird(Bird bird, IOnExplosions iOnExplosions1, IOnBirds iOnBirds) {
         int result = checkIsDestroyedWithBird(bird, iOnExplosions1, iOnBirds);
         if (0 != result) {
@@ -423,7 +409,6 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
         return null;
     }
 
-    // Va chạm với Heart
     public boolean destroyedWithHeart(Heart[] hearts) {
         return checkIsDestroyedWithHeart(hearts);
     }
@@ -532,7 +517,6 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
         return null;
     }
 
-    // Va chạm với Bullet
     public boolean destroyedWithBullet(List<Bullet> bullets) {
         if (checkIsDestroyedWithBullet(bullets)) {
             iOnExplosions.addExplosion(new Explosion(x, y, width, height));

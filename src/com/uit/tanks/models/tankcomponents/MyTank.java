@@ -2,9 +2,9 @@ package com.uit.tanks.models.tankcomponents;
 
 import com.uit.tanks.managers.AssistantEnemyTank;
 import com.uit.tanks.models.Bird;
-import com.uit.tanks.models.listenermanagers.IOnExplosions;
 import com.uit.tanks.models.ImmovableItem;
 import com.uit.tanks.models.listenermanagers.IOnBullets;
+import com.uit.tanks.models.listenermanagers.IOnExplosions;
 import com.uit.tanks.models.listenermanagers.IOnMyTanks;
 
 import java.awt.*;

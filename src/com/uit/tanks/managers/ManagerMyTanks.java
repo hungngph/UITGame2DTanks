@@ -65,7 +65,7 @@ public class ManagerMyTanks implements IOnMyTanks, IAttributeConstants, IImageCo
     }
 
     @Override
-    public void initNewMyTank( IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
+    public void initNewMyTank(IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
         myTank = new MyTank(X_MYTANK_DEFAULT, Y_MYTANK_DEFAULT, TANK_SIZE, TANK_SIZE, MYTANK_SPEED, UP,
                 iOnExplosions, iOnBullets, this);
     }

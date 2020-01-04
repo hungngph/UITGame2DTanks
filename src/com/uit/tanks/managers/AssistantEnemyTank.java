@@ -4,17 +4,16 @@ import com.uit.tanks.common.IAttributeConstants;
 import com.uit.tanks.common.IImageConstants;
 import com.uit.tanks.models.Bird;
 import com.uit.tanks.models.Heart;
+import com.uit.tanks.models.ImmovableItem;
+import com.uit.tanks.models.listenermanagers.IOnBullets;
 import com.uit.tanks.models.listenermanagers.IOnEnemyTanks;
 import com.uit.tanks.models.listenermanagers.IOnExplosions;
-import com.uit.tanks.models.ImmovableItem;
 import com.uit.tanks.models.tankcomponents.EnemyTank;
-import com.uit.tanks.models.listenermanagers.IOnBullets;
 import com.uit.tanks.models.tankcomponents.MyTank;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class AssistantEnemyTank implements IOnEnemyTanks, IAttributeConstants, IImageConstants {
     private EnemyTank enemyTank;
@@ -39,12 +38,7 @@ public class AssistantEnemyTank implements IOnEnemyTanks, IAttributeConstants, I
     public void moveEnemyTank(int time, AssistantEnemyTank[] assistantEnemyTankArray, ImmovableItem[][] immovableItems,
                               MyTank myTank, Bird bird, Heart[] hearts) {
         if (null != enemyTank) {
-            enemyTank.moveEnemyTank(time,assistantEnemyTankArray, immovableItems, myTank, bird, hearts);
-        }
-    }
-    public void moveEnemyT( ) {
-        if (null != enemyTank) {
-            enemyTank.moveEnemyT();
+            enemyTank.moveEnemyTank(time, assistantEnemyTankArray, immovableItems, myTank, bird, hearts);
         }
     }
 
@@ -73,19 +67,17 @@ public class AssistantEnemyTank implements IOnEnemyTanks, IAttributeConstants, I
         return enemyTank;
     }
 
-    public boolean setxx(int x, int y)
-    {
-        if(x<=y && x+TANK_SIZE >=y)
+    public boolean setxx(int x, int y) {
+        if (x <= y && x + TANK_SIZE >= y)
             return false;
-        if(x>=y && x-TANK_SIZE <=y)
+        if (x >= y && x - TANK_SIZE <= y)
             return false;
 
         return true;
     }
 
     @Override
-    public void initRivivalEnemyTank(List<Integer> xList,IOnExplosions iOnExplosions, IOnBullets iOnBullets )
-    {
+    public void initRivivalEnemyTank(List<Integer> xList, IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
         List<Integer> xEnemyTank;
         xEnemyTank = new ArrayList<>();
         xEnemyTank.add(30);
@@ -93,16 +85,15 @@ public class AssistantEnemyTank implements IOnEnemyTanks, IAttributeConstants, I
         xEnemyTank.add(540);
         xEnemyTank.add(675);
         int xEnemy = xEnemyTank.get(0);
-        for(int j=1; j<=3; j++) {
-            boolean k=true;
+        for (int j = 1; j <= 3; j++) {
+            boolean k = true;
             for (int i = 0; i < xList.size(); i++) {
-                if (!setxx(xEnemy,xList.get(i)))
-                {
-                    k=false;
+                if (!setxx(xEnemy, xList.get(i))) {
+                    k = false;
                     break;
                 }
             }
-            if(k) break;
+            if (k) break;
             xEnemy = xEnemyTank.get(j);
         }
 
@@ -110,6 +101,7 @@ public class AssistantEnemyTank implements IOnEnemyTanks, IAttributeConstants, I
         enemyTank = new EnemyTank(xEnemy, yEnemy, TANK_SIZE, TANK_SIZE, ENEMYTANK_SPEED, DOWN,
                 iOnExplosions, iOnBullets, this);
     }
+
     @Override
     public void initNewEnemyTank(IOnExplosions iOnExplosions, IOnBullets iOnBullets) {
         List<Integer> xEnemyTank;
