@@ -21,6 +21,7 @@ public interface IAttributeConstants {
     String EXIT_BUTTON = "EXIT_BUTTON";
     String ONE_PLAYER_BUTTON = "ONE_PLAYER_BUTTON";
     String PAUSE_BUTTON = "PAUSE_BUTTON";
+    String MUSIC_BUTTON = "MUSIC_BUTTON";
 
     int ITEM_SIZE = 27;
 

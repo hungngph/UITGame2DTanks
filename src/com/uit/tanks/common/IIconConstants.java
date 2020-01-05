@@ -27,4 +27,7 @@ public interface IIconConstants {
     Icon BUTTON_CTRL1 = MyImageIcon.getIcon("/resources/images/buttons/button_ctrl(1).png");
     Icon BUTTON_PAUSE = MyImageIcon.getIcon("/resources/images/buttons/button_pause.png");
     Icon BUTTON_PAUSE1 = MyImageIcon.getIcon("/resources/images/buttons/button_pause(1).png");
+    Icon BUTTON_MUSIC = MyImageIcon.getIcon("/resources/images/buttons/button_music.png");
+    Icon BUTTON_MUSIC1 = MyImageIcon.getIcon("/resources/images/buttons/button_music(1).png");
+
 }
