@@ -1,7 +1,9 @@
 package com.uit.tanks.guis.containers;
 
 import com.uit.tanks.common.IAttributeConstants;
-import com.uit.tanks.guis.containers.panels.*;
+import com.uit.tanks.guis.containers.panels.ControlsPanel;
+import com.uit.tanks.guis.containers.panels.MainMenuPanel;
+import com.uit.tanks.guis.containers.panels.StartPanel;
 import com.uit.tanks.guis.containers.panels.gamepanels.GamePanel;
 
 import javax.swing.*;

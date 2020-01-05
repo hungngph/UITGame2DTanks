@@ -4,16 +4,17 @@ import com.uit.tanks.common.IAttributeConstants;
 import com.uit.tanks.common.IImageConstants;
 import com.uit.tanks.models.Bird;
 import com.uit.tanks.models.Bomb;
+import com.uit.tanks.models.ImmovableItem;
 import com.uit.tanks.models.listenermanagers.IOnBirds;
 import com.uit.tanks.models.listenermanagers.IOnBombs;
 import com.uit.tanks.models.listenermanagers.IOnBullets;
 import com.uit.tanks.models.listenermanagers.IOnExplosions;
-import com.uit.tanks.models.ImmovableItem;
 import com.uit.tanks.models.tankcomponents.MyTank;
 
 import java.awt.*;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class ManagerBombs implements IOnBombs, IAttributeConstants, IImageConstants {
     private Bomb[] bombs;

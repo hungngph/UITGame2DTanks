@@ -200,8 +200,7 @@ public class ScorePanel extends JPanel implements IAttributeConstants, IIconCons
         graphics2D.drawString("" + iActionShowGame.getScore(), 300, 260);
     }
 
-    private void drawLifeEnemy(Graphics2D graphics2D)
-    {
+    private void drawLifeEnemy(Graphics2D graphics2D) {
         graphics2D.drawImage(ENEMYTANK_UP, 183, 450, 50, 50, null);
         graphics2D.setColor(Color.WHITE);
         graphics2D.setFont(new Font("Tahoma", Font.BOLD, 45));

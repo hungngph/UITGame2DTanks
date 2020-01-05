@@ -10,7 +10,7 @@ public interface IOnEnemyTanks {
 
     void initNewEnemyTank(IOnExplosions iOnExplosions, IOnBullets iOnBullets);
 
-    void initRivivalEnemyTank(List<Integer> xList, IOnExplosions iOnExplosions, IOnBullets iOnBullets );
+    void initRivivalEnemyTank(List<Integer> xList, IOnExplosions iOnExplosions, IOnBullets iOnBullets);
 
     int getLifeEnemy();
 

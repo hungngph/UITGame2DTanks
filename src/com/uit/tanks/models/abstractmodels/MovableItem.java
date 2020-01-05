@@ -231,9 +231,9 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
         EnemyTank enemyTank = interSectWithEnemyTanks(assistantEnemyTankArray);
         List<Integer> xList = new ArrayList<>();
 
-        for(int i=0; i<assistantEnemyTankArray.length; i++)
-            if(assistantEnemyTankArray[i]!=null){
-                if(assistantEnemyTankArray[i].getEnemyTank()!=enemyTank)
+        for (int i = 0; i < assistantEnemyTankArray.length; i++)
+            if (assistantEnemyTankArray[i] != null) {
+                if (assistantEnemyTankArray[i].getEnemyTank() != enemyTank)
                     xList.add(assistantEnemyTankArray[i].getEnemyTank().getX());
             }
 
@@ -242,7 +242,7 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
             enemyTank.destroyedEnemyTank();
             if (enemyTank.getLifeEnemyTank() > 0) {
 
-                enemyTank.initRivivalEnemy(xList,iOnExplosions, iOnBullets);
+                enemyTank.initRivivalEnemy(xList, iOnExplosions, iOnBullets);
             } else {
                 enemyTank.getAssistantEnemyTank().destroyAssistantEnemyTank();
                 if (0 == enemyTank.getAssistantEnemyTank().getNumberEnemyTanks()) {
