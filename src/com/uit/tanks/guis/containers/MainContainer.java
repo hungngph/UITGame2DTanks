@@ -50,6 +50,9 @@ public class MainContainer extends JPanel implements IAttributeConstants, IActio
         controlsPanel.setIActionEnterGame(this);
         gamePanel.getScorePanel().setIActionEnterGame(this);
         mainMenuPanel.setIActionThread(gamePanel.getPlayPanel());
+
+        gamePanel.getScorePanel().setIActionMusicPlay1(mainMenuPanel);
+        gamePanel.getScorePanel().setIOnMusic(controlsPanel);
     }
 
     public StartPanel getStartPanel() {
@@ -58,6 +61,14 @@ public class MainContainer extends JPanel implements IAttributeConstants, IActio
 
     public MainMenuPanel getMainMenuPanel() {
         return mainMenuPanel;
+    }
+
+    public ControlsPanel getControlsPanel() {
+        return controlsPanel;
+    }
+
+    public GamePanel getGamePanel() {
+        return gamePanel;
     }
 
     @Override

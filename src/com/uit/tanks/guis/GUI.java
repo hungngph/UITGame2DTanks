@@ -1,8 +1,10 @@
 package com.uit.tanks.guis;
 
 import com.uit.tanks.common.IAttributeConstants;
+import com.uit.tanks.common.IAudioConstants;
 import com.uit.tanks.common.IImageConstants;
 import com.uit.tanks.guis.containers.MainContainer;
+import com.uit.tanks.models.ObjectAudio;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,8 +12,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class GUI extends JFrame implements IAttributeConstants, IActionExitGame,
-        IImageConstants {
+        IImageConstants, IAudioConstants, IActionMusic {
     private MainContainer mainContainer;
+    private ObjectAudio objectAudioGUI;
 
     public GUI() throws HeadlessException {
         initGUI();
@@ -43,6 +46,8 @@ public class GUI extends JFrame implements IAttributeConstants, IActionExitGame,
 
     private void initComponents() {
         mainContainer = new MainContainer();
+        objectAudioGUI = new ObjectAudio(SOUNDTRACK1);
+        objectAudioGUI.loop();
     }
 
     private void addComponents() {
@@ -52,6 +57,9 @@ public class GUI extends JFrame implements IAttributeConstants, IActionExitGame,
     private void setIActions() {
         mainContainer.getStartPanel().setIActionExitGame(this);
         mainContainer.getMainMenuPanel().setIActionExitGame(this);
+        mainContainer.getControlsPanel().setIActionMusicGUI(this);
+        mainContainer.getMainMenuPanel().setIActionMusicGUI(this);
+        mainContainer.getGamePanel().getScorePanel().setIActionMusicGUI(this);
     }
 
     private void addEventClosing() {
@@ -70,5 +78,15 @@ public class GUI extends JFrame implements IAttributeConstants, IActionExitGame,
     @Override
     public void exitGame() {
         System.exit(0);
+    }
+
+    @Override
+    public void playMusic() {
+        objectAudioGUI.loop();
+    }
+
+    @Override
+    public void stopMusic() {
+        objectAudioGUI.stop();
     }
 }

@@ -1,5 +1,6 @@
 package com.uit.tanks.models;
 
+import com.uit.tanks.common.IAudioConstants;
 import com.uit.tanks.common.IImageConstants;
 import com.uit.tanks.models.abstractmodels.GameItem;
 import com.uit.tanks.models.listenermanagers.IOnBirds;
@@ -7,12 +8,14 @@ import com.uit.tanks.models.listenermanagers.IOnExplosions;
 
 import java.awt.*;
 
-public class Bird extends GameItem implements IImageConstants {
+public class Bird extends GameItem implements IImageConstants, IAudioConstants {
     private IOnBirds iOnBirds;
+    private ObjectAudio objectAudio;
 
     public Bird(int x, int y, int width, int height, IOnExplosions iOnExplosions, IOnBirds iOnBirds) {
         super(x, y, width, height, iOnExplosions);
         this.iOnBirds = iOnBirds;
+        objectAudio = new ObjectAudio(EXPLOSION_BIRD);
     }
 
     @Override
@@ -28,6 +31,7 @@ public class Bird extends GameItem implements IImageConstants {
     public void destroyedBird() {
         if (destroyed()) {
             iOnBirds.remove(this);
+            objectAudio.play();
         }
     }
 

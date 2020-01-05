@@ -1,9 +1,11 @@
 package com.uit.tanks.guis.containers.panels.gamepanels;
 
 import com.uit.tanks.common.IAttributeConstants;
+import com.uit.tanks.common.IAudioConstants;
 import com.uit.tanks.common.IImageConstants;
 import com.uit.tanks.guis.containers.panels.IActionThread;
 import com.uit.tanks.managers.*;
+import com.uit.tanks.models.ObjectAudio;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +15,7 @@ import java.awt.event.KeyListener;
 import java.util.Random;
 
 public class PlayPanel extends JPanel implements IAttributeConstants, IImageConstants,
-        Runnable, IActionThread, IActionShowGame {
+        Runnable, IActionThread, IActionShowGame, IAudioConstants {
     private ManagerExplosions managerExplosions;
 
     private ManagerImmovableItems managerImmovableItems;
@@ -197,10 +199,13 @@ public class PlayPanel extends JPanel implements IAttributeConstants, IImageCons
     }
 
     private void winGame() {
+        ObjectAudio objectAudioWin = new ObjectAudio(WIN);
+        objectAudioWin.loop();
         int click = JOptionPane.showConfirmDialog(PlayPanel.this,
                 "CONGRATULATION\nPRESS OK TO BACK MAIN MENU",
                 "WIN", JOptionPane.DEFAULT_OPTION);
         if (JOptionPane.YES_OPTION == click) {
+            objectAudioWin.stop();
             iActionPlayGame.backMenuMainPanel();
         }
     }
@@ -217,10 +222,13 @@ public class PlayPanel extends JPanel implements IAttributeConstants, IImageCons
     }
 
     private void looseGame() {
+        ObjectAudio objectAudioLoose = new ObjectAudio(LOOSE);
+        objectAudioLoose.loop();
         int click = JOptionPane.showConfirmDialog(PlayPanel.this,
                 "CONSOLATORY\nPRESS OK TO BACK MAIN MENU",
                 "LOOSE", JOptionPane.DEFAULT_OPTION);
         if (JOptionPane.YES_OPTION == click) {
+            objectAudioLoose.stop();
             iActionPlayGame.backMenuMainPanel();
         }
     }
@@ -311,10 +319,12 @@ public class PlayPanel extends JPanel implements IAttributeConstants, IImageCons
     public int getScore() {
         return managerMyBullets.getScore();
     }
+
     @Override
     public int getLifeEnemy() {
         return managerEnemyTanks.getNumberEnemyTank();
     }
+
     @Override
     public int getRealLifeMyTank() {
         return managerMyTank.getRealLifeMyTank();

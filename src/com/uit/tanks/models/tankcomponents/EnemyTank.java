@@ -4,6 +4,7 @@ import com.uit.tanks.managers.AssistantEnemyTank;
 import com.uit.tanks.models.Bird;
 import com.uit.tanks.models.Heart;
 import com.uit.tanks.models.ImmovableItem;
+import com.uit.tanks.models.ObjectAudio;
 import com.uit.tanks.models.listenermanagers.IOnBullets;
 import com.uit.tanks.models.listenermanagers.IOnEnemyTanks;
 import com.uit.tanks.models.listenermanagers.IOnExplosions;
@@ -14,12 +15,14 @@ import java.util.Random;
 
 public class EnemyTank extends Tank {
     private IOnEnemyTanks iOnEnemyTanks;
+    private ObjectAudio objectAudio;
 
     public EnemyTank(int x, int y, int width, int height, int speed, int orient,
                      IOnExplosions iOnExplosions, IOnBullets iOnBullets,
                      IOnEnemyTanks iOnEnemyTanks) {
         super(x, y, width, height, speed, orient, iOnExplosions, iOnBullets);
         this.iOnEnemyTanks = iOnEnemyTanks;
+        objectAudio = new ObjectAudio(EXPLOSION_TANK);
     }
 
     @Override
@@ -97,6 +100,7 @@ public class EnemyTank extends Tank {
     public void destroyedEnemyTank() {
         if (destroyed()) {
             iOnEnemyTanks.remove(this);
+            objectAudio.play();
         }
     }
 

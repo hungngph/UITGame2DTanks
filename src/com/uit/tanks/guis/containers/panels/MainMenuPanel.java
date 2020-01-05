@@ -1,10 +1,13 @@
 package com.uit.tanks.guis.containers.panels;
 
 import com.uit.tanks.common.IAttributeConstants;
+import com.uit.tanks.common.IAudioConstants;
 import com.uit.tanks.common.IIconConstants;
 import com.uit.tanks.common.IImageConstants;
 import com.uit.tanks.guis.IActionExitGame;
+import com.uit.tanks.guis.IActionMusic;
 import com.uit.tanks.guis.containers.IActionEnterGame;
+import com.uit.tanks.models.ObjectAudio;
 import com.uit.tanks.utils.MyButton;
 
 import javax.swing.*;
@@ -13,7 +16,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainMenuPanel extends JPanel implements IAttributeConstants, IIconConstants,
-        IImageConstants, ActionListener {
+        IImageConstants, ActionListener, IAudioConstants, IActionMusic {
     private JButton bt1Player;
     private JButton btControls;
     private JButton btExit;
@@ -23,12 +26,16 @@ public class MainMenuPanel extends JPanel implements IAttributeConstants, IIconC
     private IActionEnterGame iActionEnterGame;
     private IActionExitGame iActionExitGame;
     private IActionThread iActionThread;
+    private IActionMusic iActionMusicGUI;
+
+    private ObjectAudio objectAudioPlay;
 
     public MainMenuPanel() {
         initMenuPanel();
         initComponents();
         addComponents();
         addEvents();
+        objectAudioPlay = new ObjectAudio(SOUNDTRACK2);
     }
 
     private void initMenuPanel() {
@@ -92,6 +99,8 @@ public class MainMenuPanel extends JPanel implements IAttributeConstants, IIconC
         String idButton = e.getActionCommand();
         switch (idButton) {
             case ONE_PLAYER_BUTTON: {
+                iActionMusicGUI.stopMusic();
+                objectAudioPlay.loop();
                 iActionEnterGame.showGamePanel();
                 iActionThread.startGame(new Thread(iActionEnterGame.addRunnable()));
                 iActionThread.setIsImperishable(false);
@@ -121,5 +130,19 @@ public class MainMenuPanel extends JPanel implements IAttributeConstants, IIconC
 
     public void setIActionThread(IActionThread iActionThread) {
         this.iActionThread = iActionThread;
+    }
+
+    public void setIActionMusicGUI(IActionMusic iActionMusicGUI) {
+        this.iActionMusicGUI = iActionMusicGUI;
+    }
+
+    @Override
+    public void playMusic() {
+        objectAudioPlay.loop();
+    }
+
+    @Override
+    public void stopMusic() {
+        objectAudioPlay.stop();
     }
 }

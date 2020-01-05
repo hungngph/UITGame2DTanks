@@ -1,6 +1,7 @@
 package com.uit.tanks.models.abstractmodels;
 
 import com.uit.tanks.common.IAttributeConstants;
+import com.uit.tanks.common.IAudioConstants;
 import com.uit.tanks.common.IImageConstants;
 import com.uit.tanks.managers.AssistantEnemyTank;
 import com.uit.tanks.models.*;
@@ -15,7 +16,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class MovableItem extends GameItem implements IAttributeConstants, IImageConstants {
+public abstract class MovableItem extends GameItem implements IAttributeConstants, IImageConstants, IAudioConstants {
     protected int orient;
     protected int speed;
 
@@ -460,7 +461,6 @@ public abstract class MovableItem extends GameItem implements IAttributeConstant
         return null;
     }
 
-    // Va chạm với Bomb
     public boolean destroyedWithBomb(Bomb[] bombs) {
         if (checkIsDestroyedWithBomb(bombs)) {
             iOnExplosions.addExplosion(new Explosion(x, y, width, height));

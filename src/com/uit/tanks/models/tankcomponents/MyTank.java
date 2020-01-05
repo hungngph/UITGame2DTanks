@@ -3,6 +3,7 @@ package com.uit.tanks.models.tankcomponents;
 import com.uit.tanks.managers.AssistantEnemyTank;
 import com.uit.tanks.models.Bird;
 import com.uit.tanks.models.ImmovableItem;
+import com.uit.tanks.models.ObjectAudio;
 import com.uit.tanks.models.listenermanagers.IOnBullets;
 import com.uit.tanks.models.listenermanagers.IOnExplosions;
 import com.uit.tanks.models.listenermanagers.IOnMyTanks;
@@ -11,12 +12,14 @@ import java.awt.*;
 
 public class MyTank extends Tank {
     private IOnMyTanks iOnMyTanks;
+    private ObjectAudio objectAudio;
 
     public MyTank(int x, int y, int width, int height, int speed, int orient,
                   IOnExplosions iOnExplosions, IOnBullets iOnBullets,
                   IOnMyTanks iOnMyTanks) {
         super(x, y, width, height, speed, orient, iOnExplosions, iOnBullets);
         this.iOnMyTanks = iOnMyTanks;
+        objectAudio = new ObjectAudio(EXPLOSION_TANK);
     }
 
     @Override

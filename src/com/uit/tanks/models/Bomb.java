@@ -9,11 +9,13 @@ import java.util.Random;
 
 public class Bomb extends MovableItem {
     private IOnBombs iOnBombs;
+    private ObjectAudio objectAudio;
 
     public Bomb(int x, int y, int width, int height,
                 int speed, int orient, IOnExplosions iOnExplosions, IOnBombs iOnBombs) {
         super(x, y, width, height, speed, orient, iOnExplosions);
         this.iOnBombs = iOnBombs;
+        objectAudio = new ObjectAudio(EXPLOSION_BOMB);
     }
 
     @Override
@@ -43,6 +45,7 @@ public class Bomb extends MovableItem {
     public void destroyedBomb() {
         if (destroyed()) {
             iOnBombs.remove(this);
+            objectAudio.play();
         }
     }
 
